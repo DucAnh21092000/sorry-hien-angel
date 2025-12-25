@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Anh xin lỗi 🥺</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffd6e8, #fff0f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      animation: pop 0.8s ease;
+      max-width: 350px;
+    }
+
+    @keyframes pop {
+      from {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      color: #ff5c8a;
+      margin-bottom: 10px;
+      animation: fadeIn 2s forwards;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .emoji {
+      font-size: 50px;
+      margin: 15px 0;
+      animation: shake 1.5s infinite;
+    }
+
+    @keyframes shake {
+
+      0%,
+      100% {
+        transform: rotate(0);
+      }
+
+      25% {
+        transform: rotate(5deg);
+      }
+
+      75% {
+        transform: rotate(-5deg);
+      }
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 30px;
+      background: #ff5c8a;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff2f6d;
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .love {
+      color: #ff5c8a;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Anh xin lỗi công chúa áo hồng 🥺</h1>
+    <div class="emoji">🐰💗</div>
+    <p>
+      Anh biết là mình có những thứ còn không phải.<br>
+      Thật sự là anh không cố ý đâu 😭<br>
+      Cho anh xin một cơ hội được sửa sai nha~
+    </p>
+
+    <button onclick="acceptSorry()">Tha lỗi cho anh nha 💕</button>
+
+    <div id="result" class="hidden love">
+      Yayyy~ Cảm ơn em nhiều lắm 🥰<br>
+      Anh hứa sẽ ngoan hơn 💖
+    </div>
+  </div>
+
+  <script>
+    function acceptSorry() {
+      document.getElementById("result").classList.remove("hidden");
+    }
+  </script>
+
+</body>
+
+</html>
